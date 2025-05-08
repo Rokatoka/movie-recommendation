@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import config from "../index";
+import config from "../index.ts";
 
 export function connectToMongoDB() {
     mongoose.connect(config.mongoURI, {dbName: 'movies'}).then(() => {

@@ -1,10 +1,10 @@
 import type {Response, Request} from "express";
 import * as bcrypt from 'bcrypt'
-import UserModel from "../models/user/user.model";
-import config from "../config";
-import type {CustomSession} from "../types";
+import UserModel from "../models/user/user.model.ts";
+import config from "../config/index.ts";
+import type {CustomSession} from "../types/index.ts";
+import * as jsonwebtoken from 'jsonwebtoken'
 
-const jsonwebtoken = require('jsonwebtoken')
 const SALT_ROUNDS = 10
 
 export async function loginUser(req: Request, res: Response) {

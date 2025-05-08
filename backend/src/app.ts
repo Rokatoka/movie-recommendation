@@ -1,10 +1,11 @@
 import express from 'express'
-import authRouter from "./routes/auth";
-import moviesRouter from "./routes/movies";
-import {connectToMongoDB} from "./config/db/mongo";
-import config from "./config";
-
-const session = require('express-session')
+import authRouter from "./routes/auth.ts";
+import moviesRouter from "./routes/movies.ts";
+import {connectToMongoDB} from "./config/db/mongo.ts";
+import config from "./config/index.ts";
+import session from "express-session";
+import {expressMiddleware} from "@apollo/server/express4";
+import {server} from "./graphql/server.ts";
 
 const app = express()
 

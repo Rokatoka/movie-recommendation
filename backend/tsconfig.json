@@ -5,7 +5,7 @@
     /* Language and Environment */
     "target": "es2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
+    "module": "esnext",                                /* Specify what module code is generated. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
 
     /* Emit */
@@ -21,6 +21,8 @@
     "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
     "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
   },
   "include": ["src"],
   "exclude": ["node_modules"]
